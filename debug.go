@@ -1,6 +1,6 @@
 package loggoext
 
-import (	
+import (
 	"fmt"
 	"github.com/juju/loggo"
 )
@@ -10,8 +10,9 @@ func DebugLoggers(debugModules []string) {
 		"": loggo.INFO,
 	}
 	for _, mod := range debugModules {
-		if mod == "<root>":
+		if mod == "<root>" {
 			mod = ""
+		}
 		conf[mod] = loggo.DEBUG
 	}
 
